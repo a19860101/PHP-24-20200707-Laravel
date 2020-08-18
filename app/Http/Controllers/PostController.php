@@ -8,9 +8,7 @@ class PostController extends Controller
 {
     //
     function test(){
-        return 'hello posts test';
+        return view('welcome');
     }
-    function qwer(){
-        return 'hello qwer!!!';
-    }
+
 }

@@ -20,4 +20,7 @@ php artisan migrate:reset
 
 #查看migration狀態
 php artisan migrate:status
+
+#建立Controller
+php artisan make:controller PostController     
 ```
