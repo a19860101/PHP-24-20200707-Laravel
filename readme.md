@@ -9,4 +9,15 @@ php artisan serve
 #建立資料表遷移 migration
 php artisan make:migration create_posts_table
 
+#執行migration
+php artisan migrate
+
+#回復上一次migrate
+php artisan migrate:rollback
+
+#重製migration
+php artisan migrate:reset
+
+#查看migration狀態
+php artisan migrate:status
 ```
