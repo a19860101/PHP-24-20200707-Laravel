@@ -5,7 +5,7 @@
 @endsection
 
 @section('main-title')
-<h1 class="my-4">Page Heading
+<h1 class="my-4">Home
   <small>Secondary Text</small>
 </h1>
 @endsection

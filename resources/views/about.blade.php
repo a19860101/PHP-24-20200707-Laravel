@@ -1,11 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>about</h1>
-</body>
-</html>
+@extends('template.master')
+
+@section('page-title')
+<title>Laravel Blog About</title>
+@endsection
+
+@section('main-title')
+<h1 class="my-4">About
+  <small>Lorem ipsum dolor sit amet.</small>
+</h1>
+@endsection
