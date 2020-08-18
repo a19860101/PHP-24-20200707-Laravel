@@ -20,5 +20,5 @@ Route::get('/',function(){
 Route::get('/about',function(){
     return view('about');
 });
-
-
+Route::get('/post','PostController@test');
+Route::get('/qwer','PostController@qwer');
