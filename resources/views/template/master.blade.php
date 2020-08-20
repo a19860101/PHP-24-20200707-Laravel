@@ -34,7 +34,8 @@
         @yield('main-title')
 
         <!-- Blog Post -->
-        <!-- <div class="card mb-4">
+        <!-- 
+        <div class="card mb-4">
           <img class="card-img-top" src="http://placehold.it/750x300" alt="Card image cap">
           <div class="card-body">
             <h2 class="card-title">Post Title</h2>
@@ -45,7 +46,8 @@
             Posted on January 1, 2020 by
             <a href="#">Start Bootstrap</a>
           </div>
-        </div> -->
+        </div>
+         -->
 
        
 
