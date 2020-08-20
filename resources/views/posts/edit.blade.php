@@ -5,6 +5,6 @@
 @endsection
 
 @section('main-title')
-<h1 class="my-4">編輯
+<h1 class="my-4">編輯 
 </h1>
 @endsection

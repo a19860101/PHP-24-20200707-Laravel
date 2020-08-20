@@ -5,6 +5,5 @@
 @endsection
 
 @section('main-title')
-<h1 class="my-4">文章標題
-</h1>
+<h1 class="my-4">文章標題 {{ $id }} </h1>
 @endsection

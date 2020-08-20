@@ -48,6 +48,10 @@ class PostController extends Controller
     public function show($id)
     {
         //
+        // return view('posts.show',['id' => $id]);
+        // return view('posts.show',compact('id'));
+        return view('posts.show')->with(['id' => $id]);
+        
     }
 
     /**
