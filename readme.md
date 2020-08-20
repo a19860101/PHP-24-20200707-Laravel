@@ -26,4 +26,7 @@ php artisan make:controller PostController
 
 #使用resource建立Controller 
 php artisan make:controller PostController --resource
+
+#查詢路由
+php artisan route:list
 ```
