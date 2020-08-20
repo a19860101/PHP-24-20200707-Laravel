@@ -15,7 +15,7 @@ class PostController extends Controller
     public function index()
     {
         //
-        $posts = DB::select('SELECT * FROM posts');
+        $posts = DB::select('SELECT * FROM posts ORDER BY id DESC');
         return view('index',compact('posts'));
     }
 
