@@ -14,9 +14,10 @@
   <div class="card-body">
     <h2 class="card-title">{{$post->title}}</h2>
     <p class="card-text">
-      {{$post->content}}
+      {{str_limit($post->content, 200)}}
     </p>
-    <a href="#" class="btn btn-primary">Read More &rarr;</a>
+    <!-- <a href="/posts/{{$post->id}}" class="btn btn-primary">繼續閱讀 &rarr;</a> -->
+    <a href="{{route('posts.show',['id'=>$post->id])}}" class="btn btn-primary">繼續閱讀 &rarr;</a>
   </div>
   <div class="card-footer text-muted">
     建立時間 {{$post->created_at}}
