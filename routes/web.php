@@ -14,9 +14,6 @@
 Route::get('/welcome', function () {
     return view('welcome');
 });
-Route::get('/',function(){
-    return view('index');
-});
 Route::get('/about',function(){
     return view('about');
 });
@@ -26,4 +23,7 @@ Route::get('/about',function(){
 // Route::get('/posts/show','PostController@show');
 // Route::get('/posts/index','PostController@index');
 
+Route::get('/','PostController@index');
+
 Route::resource('/posts','PostController');
+
