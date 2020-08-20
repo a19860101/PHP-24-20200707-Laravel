@@ -44,6 +44,7 @@ class PostController extends Controller
             now(),
             now()
         ]);
+        return redirect('/');
     }
 
     /**
