@@ -7,7 +7,9 @@
 @section('main-title')
 <h1 class="my-4">建立文章
 </h1>
-<form action="" method="post">
+<!-- <form action="/posts" method="post"> -->
+<form action="{{route('posts.store')}}" method="post">
+    @csrf
     <div class="form-group">
         <label for="title">文章標題</label>
         <input type="text" name="title" id="title" class="form-control">
