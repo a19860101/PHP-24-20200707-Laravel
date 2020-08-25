@@ -5,7 +5,9 @@
 @endsection
 
 @section('main-title')
-@foreach($posts as $post)
+
+{{-- @foreach($posts as $post) --}}
+
 <h1 class="mt-4">{{$post->title}}</h1>
 <p class="lead">
     by <a href="#">Author</a>
@@ -29,5 +31,7 @@
     @method('delete')
     <input type="submit" class="btn btn-danger" value="刪除文章" onclick="return confirm('確認刪除？')">
 </form>
-@endforeach
+
+{{-- @endforeach --}}
+
 @endsection
