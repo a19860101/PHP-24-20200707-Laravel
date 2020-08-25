@@ -14,7 +14,7 @@
   <div class="card-body">
     <h2 class="card-title">{{$post->title}}</h2>
     <p class="card-text">
-      {{str_limit($post->content, 200)}}
+      {{Str::limit($post->content, 200)}}
     </p>
     <!-- <a href="/posts/{{$post->id}}" class="btn btn-primary">繼續閱讀 &rarr;</a> -->
     <a href="{{route('posts.show',['id'=>$post->id])}}" class="btn btn-primary">繼續閱讀 &rarr;</a>
