@@ -15,6 +15,10 @@ class PostController extends Controller
     public function index()
     {
         //
+        // $posts = Post::all();
+        // $posts = Post::get();
+        $posts = Post::orderBy('id','DESC')->get();
+        return view('index',compact('posts'));
     }
 
     /**
@@ -47,6 +51,12 @@ class PostController extends Controller
     public function show(Post $post)
     {
         //
+        return view('posts.show',compact('post'));
+
+        // $post = Post::where('id',$post->id)->first();
+        // $post = Post::find($post->id);
+        // $post = Post::findOrFail($post->id);
+        // return $post;
     }
 
     /**
