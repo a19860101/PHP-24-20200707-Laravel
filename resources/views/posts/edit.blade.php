@@ -5,7 +5,6 @@
 @endsection
 
 @section('main-title')
-    @foreach($posts as $post)
     <h1 class="my-4">編輯文章</h1>
     <!-- <form action="/posts" method="post"> -->
     <form action="{{route('posts.update',['id' => $post->id])}}" method="post">
@@ -22,5 +21,4 @@
         <input type="submit" value="編輯文章" class="btn btn-primary">
         <input type="button" value="取消" class="btn btn-danger" onclick="history.back()">
     </form>
-    @endforeach
 @endsection
