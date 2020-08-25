@@ -23,6 +23,7 @@
 最後更新時間 {{$post->updated_at}}
 </div>
 <a href="/" class="btn btn-info">文章列表</a>
+<a href="{{ route('posts.edit',['id'=>$post->id]) }}" class="btn btn-success">編輯文章</a>
 <form action="{{ route('posts.destroy',['id'=>$post->id]) }}" method="post" class="d-inline-block">
     @csrf
     @method('delete')

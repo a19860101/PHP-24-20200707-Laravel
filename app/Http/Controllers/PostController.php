@@ -75,7 +75,9 @@ class PostController extends Controller
     public function edit($id)
     {
         //
-        return view('posts.edit',compact('id'));
+        $posts = DB::select('SELECT * FROM posts WHERE id = ?',[$id]);
+        // return view('posts.edit',compact('posts'));
+        return $posts;
     }
 
     /**
