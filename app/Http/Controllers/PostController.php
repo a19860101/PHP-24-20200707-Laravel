@@ -28,6 +28,7 @@ class PostController extends Controller
     public function create()
     {
         //
+        return view('posts.create');
     }
 
     /**
@@ -39,6 +40,13 @@ class PostController extends Controller
     public function store(Request $request)
     {
         //
+        DB::table('posts')->insert([
+            'title'     => $request->title,
+            'content'   => $request->content,
+            'created_at'=> now(),
+            'updated_at'=> now()
+        ]);
+        return redirect('/');
     }
 
     /**
@@ -52,7 +60,7 @@ class PostController extends Controller
         //
         // $posts = DB::table('posts')->where('id',$id)->get();
         // return view('posts.show',compact('posts'));
-        
+
         // $post = DB::table('posts')->where('id',$id)->first();
         $post = DB::table('posts')->find($id);
         return view('posts.show',compact('post'));
