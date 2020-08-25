@@ -29,4 +29,12 @@ php artisan make:controller PostController --resource
 
 #查詢路由
 php artisan route:list
+
+#建立Model
+php artisan make:model Post
+
+參數
+- c: controller
+- m: migration
+- r: resource
 ```
