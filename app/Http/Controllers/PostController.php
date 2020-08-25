@@ -99,5 +99,7 @@ class PostController extends Controller
     public function destroy($id)
     {
         //
+        DB::delete('DELETE FROM posts WHERE id = ?',[$id]);
+        return redirect('/');
     }
 }
