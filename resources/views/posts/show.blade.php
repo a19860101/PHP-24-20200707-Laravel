@@ -17,8 +17,8 @@
 <hr>
 <img class="card-img-top" src="http://placehold.it/750x300" alt="Card image cap">
 <hr>
-<div>
-    {{$post->content}}  
+<div> 
+    {!! $post->content !!}  
 </div>
 <hr>
 <div class="mb-3">
