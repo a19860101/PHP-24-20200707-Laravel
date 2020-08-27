@@ -20,7 +20,11 @@
     <a href="{{route('posts.show',['id'=>$post->id])}}" class="btn btn-primary">繼續閱讀 &rarr;</a>
   </div>
   <div class="card-footer text-muted">
-    建立時間 {{$post->created_at}}
+    <!-- 建立時間 {{$post->created_at}} -->
+    
+    @php Carbon\Carbon::setLocale('zh_TW') @endphp
+    {{ Carbon\Carbon::parse($post->created_at)->diffForHumans() }}
+
     <a href="#">Start Bootstrap</a>
   </div>
 </div>
