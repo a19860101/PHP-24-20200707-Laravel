@@ -42,11 +42,18 @@ class PostController extends Controller
     {
         //
         // 方法一
-        $post = new Post;
-        $post->title = $request->title;
-        $post->content = $request->content;
-        $post->save();
+        // $post = new Post;
+        // $post->title = $request->title;
+        // $post->content = $request->content;
+        // $post->save();
 
+        // 方法二
+        // $post = new Post;
+        // $post->fill($request->all());
+        // $post->save();
+
+        // 方法三
+        Post::create($request->all());
         return redirect('/');
     }
 
