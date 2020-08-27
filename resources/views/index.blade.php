@@ -24,8 +24,10 @@
     
     @php Carbon\Carbon::setLocale('zh_TW') @endphp
     {{ Carbon\Carbon::parse($post->created_at)->diffForHumans() }}
-
-    <a href="#">Start Bootstrap</a>
+    by
+    <a href="#">
+      {{$post->user->name}}
+    </a>
   </div>
 </div>
 @endforeach

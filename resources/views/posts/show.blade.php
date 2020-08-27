@@ -10,7 +10,7 @@
 
 <h1 class="mt-4">{{$post->title}}</h1>
 <p class="lead">
-    by <a href="#">Author</a>
+    by <a href="#">{{ $post->user->name }}</a>
 </p>
 <hr>
 建立時間 {{$post->created_at}}

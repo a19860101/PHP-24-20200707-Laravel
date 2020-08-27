@@ -8,4 +8,8 @@ class Post extends Model
 {
     //
     protected $fillable = ['title','content'];
+
+    function user(){
+        return $this->belongsTo('App\User');
+    }
 }
