@@ -9,6 +9,8 @@ php artisan serve
 #建立資料表遷移 migration
 php artisan make:migration create_posts_table
 
+php artisan make:migration add_user_id_to_posts --table=posts
+
 #執行migration
 php artisan migrate
 
