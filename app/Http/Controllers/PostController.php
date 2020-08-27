@@ -48,12 +48,12 @@ class PostController extends Controller
         // $post->save();
 
         // 方法二
-        // $post = new Post;
-        // $post->fill($request->all());
-        // $post->save();
+        $post = new Post;
+        $post->fill($request->all());
+        $post->save();
 
         // 方法三
-        Post::create($request->all());
+        // Post::create($request->all());
         return redirect('/');
     }
 
@@ -83,6 +83,7 @@ class PostController extends Controller
     public function edit(Post $post)
     {
         //
+        return view('posts.edit',compact('post'));
     }
 
     /**
@@ -95,6 +96,20 @@ class PostController extends Controller
     public function update(Request $request, Post $post)
     {
         //
+        // $post = Post::findOrFail($post->id);
+        // $post->fill([
+        //     'title'     => $request->title,
+        //     'content'   => $request->content
+        // ]);
+
+        // $post = Post::findOrFail($post->id);
+        // $post->fill($request->all());
+        // $post->save();
+
+        $post->fill($request->all());
+        $post->save();
+
+        return redirect('/');
     }
 
     /**
