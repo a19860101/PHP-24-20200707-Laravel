@@ -37,4 +37,7 @@ php artisan make:model Post
 # c: controller
 # m: migration
 # r: resource
+
+#建立Auth (會員系統)
+php artisan make:auth
 ```
