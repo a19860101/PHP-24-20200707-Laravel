@@ -4,7 +4,7 @@
 <title>Laravel Blog</title>
 @endsection
 
-@section('main-title')
+@section('main')
 <h1 class="my-4">Home
   <small>Secondary Text</small>
 </h1>

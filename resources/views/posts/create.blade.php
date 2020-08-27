@@ -4,7 +4,7 @@
 <title>Laravel Blog 建立新文章</title>
 @endsection
 
-@section('main-title')
+@section('main')
 <h1 class="my-4">建立文章
 </h1>
 <!-- <form action="/posts" method="post"> -->

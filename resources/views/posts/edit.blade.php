@@ -4,7 +4,7 @@
 <title>Laravel Blog 編輯</title>
 @endsection
 
-@section('main-title')
+@section('main')
     <h1 class="my-4">編輯文章</h1>
     <!-- <form action="/posts" method="post"> -->
     <form action="{{route('posts.update',['id' => $post->id])}}" method="post">

@@ -31,7 +31,7 @@
       <div class="col-md-8">
 
 
-        @yield('main-title')
+        @yield('main')
 
         <!-- Blog Post -->
         <!-- 

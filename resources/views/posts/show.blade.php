@@ -4,7 +4,7 @@
 <title>Laravel Blog #</title>
 @endsection
 
-@section('main-title')
+@section('main')
 
 {{-- @foreach($posts as $post) --}}
 
