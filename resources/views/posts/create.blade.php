@@ -22,11 +22,14 @@
     <input type="button" value="取消" class="btn btn-danger" onclick="history.back()">
 </form>
 @if($errors->any())
-<div>
     @foreach($errors->all() as $error)
-    <div>{{$error}}</div>
+    <div class="alert alert-danger mt-4">
+        {{$error}}
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>  
     @endforeach
-</div>
 @endif
 <script src="https://cdn.ckeditor.com/4.14.1/full/ckeditor.js"></script>
 <script>
