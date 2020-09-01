@@ -40,6 +40,12 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
+        //驗證 validate
+        $request->validate([
+            'title'     => 'required | max:10',
+            'content'   => 'required'
+        ]);
+        
         //
         // 方法一
         // $post = new Post;
