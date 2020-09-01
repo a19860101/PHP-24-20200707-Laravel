@@ -155,7 +155,7 @@ class PostController extends Controller
         // $post->delete();
 
         // $post->delete();
-        Storage::delete('public/images/',$post->cover);
+        Storage::delete('public/images/'.$post->cover);
         Post::destroy($post->id);
         return redirect('/');
     }
