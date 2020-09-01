@@ -67,7 +67,11 @@ class PostController extends Controller
 
         //上傳
         // return $request->file('cover')->store('images');
-        return $request->file('cover')->store('images','public');
+        // return $request->file('cover')->store('images','public');
+        // $cover_name = $request->file('cover')->getClientOriginalName();
+        $cover_ext = $request->file('cover')->getClientOriginalExtension();
+        $cover_name = md5(time()).'.'.$cover_ext;
+        return $request->file('cover')->storeAs('public/images',$cover_name);
 
     }
 
