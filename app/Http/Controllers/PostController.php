@@ -41,10 +41,10 @@ class PostController extends Controller
     public function store(Request $request)
     {
         //驗證 validate
-        $request->validate([
-            'title'     => 'required | max:10',
-            'content'   => 'required'
-        ]);
+        // $request->validate([
+        //     'title'     => 'required',
+        //     'content'   => 'required'
+        // ]);
         
         //
         // 方法一
@@ -54,14 +54,21 @@ class PostController extends Controller
         // $post->save();
 
         // 方法二
-        $post = new Post;
-        $post->fill($request->all());
-        $post->user_id = Auth::id();
-        $post->save();
+        // $post = new Post;
+        // $post->fill($request->all());
+        // $post->user_id = Auth::id();
+        // $post->save();
 
         // 方法三
         // Post::create($request->all());
-        return redirect('/');
+        // return redirect('/');
+
+
+
+        //上傳
+        // return $request->file('cover')->store('images');
+        return $request->file('cover')->store('images','public');
+
     }
 
     /**

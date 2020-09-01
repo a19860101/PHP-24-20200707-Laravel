@@ -8,11 +8,15 @@
 <h1 class="my-4">建立文章
 </h1>
 <!-- <form action="/posts" method="post"> -->
-<form action="{{route('posts.store')}}" method="post">
+<form action="{{route('posts.store')}}" method="post" enctype="multipart/form-data">
     @csrf
     <div class="form-group">
         <label for="title">文章標題</label>
         <input type="text" name="title" id="title" class="form-control" value="{{old('title')}}">
+    </div>
+    <div class="form-group">
+        <label for="cover">封面圖片</label>
+        <input type="file" name="cover" id="cover">
     </div>
     <div class="form-group">
         <label for="content">文章內容</label>
