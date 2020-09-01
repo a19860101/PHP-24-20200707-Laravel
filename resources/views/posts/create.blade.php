@@ -21,7 +21,13 @@
     <input type="submit" value="新增文章" class="btn btn-primary">
     <input type="button" value="取消" class="btn btn-danger" onclick="history.back()">
 </form>
-
+@if($errors->any())
+<div>
+    @foreach($errors->all() as $error)
+    <div>{{$error}}</div>
+    @endforeach
+</div>
+@endif
 <script src="https://cdn.ckeditor.com/4.14.1/full/ckeditor.js"></script>
 <script>
     CKEDITOR.replace('content');
