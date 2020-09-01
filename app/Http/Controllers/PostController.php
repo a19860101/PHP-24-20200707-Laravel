@@ -41,11 +41,19 @@ class PostController extends Controller
     public function store(Request $request)
     {
         //驗證 validate
-        // $request->validate([
-        //     'title'     => 'required',
-        //     'content'   => 'required'
-        // ]);
+        $request->validate([
+            'title'     => 'required',
+            'content'   => 'required',
+            'cover'     => 'required | image'
+        ]);
         
+        //上傳
+        // return $request->file('cover')->store('images');
+        // return $request->file('cover')->store('images','public');
+        // $cover_name = $request->file('cover')->getClientOriginalName();
+        $cover_ext = $request->file('cover')->getClientOriginalExtension();
+        $cover_name = md5(time()).'.'.$cover_ext;
+        $request->file('cover')->storeAs('public/images',$cover_name);
         //
         // 方法一
         // $post = new Post;
@@ -54,24 +62,21 @@ class PostController extends Controller
         // $post->save();
 
         // 方法二
-        // $post = new Post;
-        // $post->fill($request->all());
-        // $post->user_id = Auth::id();
-        // $post->save();
+        $post = new Post;
+        $post->fill($request->all());
+        $post->user_id = Auth::id();
+        $post->cover = $cover_name;
+        $post->save();
 
         // 方法三
         // Post::create($request->all());
-        // return redirect('/');
+        
+        
+        return redirect('/');
 
 
 
-        //上傳
-        // return $request->file('cover')->store('images');
-        // return $request->file('cover')->store('images','public');
-        // $cover_name = $request->file('cover')->getClientOriginalName();
-        $cover_ext = $request->file('cover')->getClientOriginalExtension();
-        $cover_name = md5(time()).'.'.$cover_ext;
-        return $request->file('cover')->storeAs('public/images',$cover_name);
+
 
     }
 
