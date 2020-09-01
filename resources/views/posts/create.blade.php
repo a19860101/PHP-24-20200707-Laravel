@@ -12,11 +12,11 @@
     @csrf
     <div class="form-group">
         <label for="title">文章標題</label>
-        <input type="text" name="title" id="title" class="form-control">
+        <input type="text" name="title" id="title" class="form-control" value="{{old('title')}}">
     </div>
     <div class="form-group">
         <label for="content">文章內容</label>
-        <textarea name="content" id="content" cols="30" rows="10" class="form-control"></textarea>
+        <textarea name="content" id="content" cols="30" rows="10" class="form-control">{{old('content')}}</textarea>
     </div>
     <input type="submit" value="新增文章" class="btn btn-primary">
     <input type="button" value="取消" class="btn btn-danger" onclick="history.back()">
