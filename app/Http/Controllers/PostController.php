@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Post;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Http\Request;
 class PostController extends Controller
 {
@@ -154,7 +155,7 @@ class PostController extends Controller
         // $post->delete();
 
         // $post->delete();
-
+        Storage::delete('public/images/',$post->cover);
         Post::destroy($post->id);
         return redirect('/');
     }
