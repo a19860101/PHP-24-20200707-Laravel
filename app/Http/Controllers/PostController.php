@@ -57,7 +57,7 @@ class PostController extends Controller
             $cover_name = md5(time()).'.'.$cover_ext;
             $request->file('cover')->storeAs('public/images',$cover_name);
         }else{
-            $cover_name = '';
+            $cover_name = 'no-pic.png';
         }
         
         //

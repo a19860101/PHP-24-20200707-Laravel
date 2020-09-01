@@ -42,4 +42,7 @@ php artisan make:model Post
 
 #建立Auth (會員系統)
 php artisan make:auth
+
+#建立storage連結
+php artisan storage:link
 ```
