@@ -17,4 +17,13 @@
     <input type="submit" value="新增分類" class="btn btn-primary">
     <input type="button" value="取消" class="btn btn-danger" onclick="history.back()">
 </form>
+
+<h2 class="pt-4">分類列表</h2>
+<ul class="list-group">
+    @foreach($categories as $cate)
+    <li class="list-group-item">
+        <a href="#">{{$cate->title}}</a>
+    </li>
+    @endforeach
+</ul>
 @endsection

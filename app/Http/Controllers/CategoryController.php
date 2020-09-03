@@ -15,10 +15,7 @@ class CategoryController extends Controller
     public function index()
     {
         //
-        $categories = Category::all();
-        // return $categories;
-
-        return view('template.sidebar.category',compact('categories'));
+       
     }
 
     /**
@@ -29,7 +26,12 @@ class CategoryController extends Controller
     public function create()
     {
         //
-        return view('category.create');
+        // return view('category.create');
+        $categories = Category::all();
+
+        // return $categories;
+
+        return view('category.create',compact('categories'));
     }
 
     /**

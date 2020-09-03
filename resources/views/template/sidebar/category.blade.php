@@ -3,8 +3,6 @@
   <div class="card-body">
     <div class="row">
       <div class="col-lg-6">
-      @foreach($categories as $cate)
-      @endforeach
         <ul class="list-unstyled mb-0">
           <li>
             <a href="#">Web Design</a>
