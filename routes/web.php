@@ -26,6 +26,7 @@ Route::get('/about',function(){
 Route::get('/','PostController@index');
 
 Route::resource('/posts','PostController');
+Route::resource('/category','CategoryController');
 
 
 Auth::routes();
