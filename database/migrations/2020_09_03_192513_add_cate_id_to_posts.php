@@ -15,6 +15,9 @@ class AddCateIdToPosts extends Migration
     {
         Schema::table('posts', function (Blueprint $table) {
             //
+            $table->unsignedBigInteger('cate_id')->nullable();
+
+            $table->foreign('cate_id')->references('id')->on('categories')->onDelete('cascade');
         });
     }
 
@@ -27,6 +30,9 @@ class AddCateIdToPosts extends Migration
     {
         Schema::table('posts', function (Blueprint $table) {
             //
+            $table->dropForeign(['cate_id']);
+            $table->dropColumn('cate_id');
+
         });
     }
 }
