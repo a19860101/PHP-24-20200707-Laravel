@@ -2,7 +2,7 @@
 @section('main')
 <div class="pt-4"></div>
 <h2>新增分類</h2>
-<form action="">
+<form action="{{route('category.store')}}" method="post">
     @csrf
     <div class="form-group">
         <label for="title">分類標題</label>
