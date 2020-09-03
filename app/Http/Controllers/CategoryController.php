@@ -25,7 +25,7 @@ class CategoryController extends Controller
     public function create()
     {
         //
-        return 'create category';
+        return view('category.create');
     }
 
     /**
