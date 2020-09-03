@@ -23,6 +23,11 @@
     @foreach($categories as $cate)
     <li class="list-group-item">
         <a href="#">{{$cate->title}}</a>
+        <form action="{{route('category.destroy',['id'=>$cate->id])}}" method="post">
+            @csrf
+            @method('delete')
+            <input type="submit" value="刪除" class="btn btn-danger btn-sm" onclick="return confirm('確認刪除？')">
+        </form>
     </li>
     @endforeach
 </ul>
