@@ -74,6 +74,7 @@ class PostController extends Controller
         $post = new Post;
         $post->fill($request->all());
         $post->user_id = Auth::id();
+        $post->cate_id = $request->cate_id;
         $post->cover = $cover_name;
         $post->save();
 
@@ -82,6 +83,8 @@ class PostController extends Controller
         
         
         return redirect('/');
+
+        // return $request->all();
 
 
 
