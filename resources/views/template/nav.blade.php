@@ -14,6 +14,9 @@
           <li class="nav-item">
             <a href="{{route('category.create')}}" class="nav-link">新增分類</a>
           </li>
+          <li class="nav-item">
+            <a href="{{route('trash.index')}}" class="nav-link">垃圾桶</a>
+          </li>
           @endauth
         </ul>
         <ul class="navbar-nav ml-auto">

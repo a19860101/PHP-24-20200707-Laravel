@@ -32,3 +32,5 @@ Route::resource('/category','CategoryController');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/trash', 'PostController@getAllTrash')->name('trash.index');
