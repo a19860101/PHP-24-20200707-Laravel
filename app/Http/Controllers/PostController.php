@@ -76,7 +76,7 @@ class PostController extends Controller
         $post = new Post;
         $post->fill($request->all());
         $post->user_id = Auth::id();
-        $post->cate_id = $request->cate_id;
+        $post->category_id = $request->category_id;
         $post->cover = $cover_name;
         $post->save();
 
