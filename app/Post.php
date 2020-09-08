@@ -9,10 +9,10 @@ class Post extends Model
     //
     protected $fillable = ['title','content'];
 
-    function user(){
+    public function user(){
         return $this->belongsTo('App\User');
     }
-    function category(){
+    public function category(){
         return $this->belongsTo('App\Category');
     }
 }
