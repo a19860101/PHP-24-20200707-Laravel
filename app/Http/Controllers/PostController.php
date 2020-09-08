@@ -167,6 +167,8 @@ class PostController extends Controller
         return redirect('/');
     }
     public function getAllTrash(){
-        return "All Trash";
+        $posts = Post::onlyTrashed()->get();
+        return view('posts.trash',compact('posts'));
+        // return $posts;
     }
 }
