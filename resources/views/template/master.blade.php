@@ -25,10 +25,10 @@
   <!-- Page Content -->
   <div class="container">
 
-    <div class="row">
+    <div class="row justify-content-center">
 
       <!-- Blog Entries Column -->
-      <div class="col-md-8">
+      <div class="col-md-10">
 
 
         @yield('main')
@@ -58,18 +58,18 @@
       </div>
 
       <!-- Sidebar Widgets Column -->
-      <div class="col-md-4">
+      <!-- <div class="col-md-4"> -->
 
         <!-- Search Widget -->
-        @include('template.sidebar.search')
+        {{-- @include('template.sidebar.search') --}}
         
         <!-- Categories Widget -->
-        @include('template.sidebar.category')
+        {{--  @include('template.sidebar.category') --}}
         
 
         <!-- Side Widget -->
 
-      </div>
+      <!-- </div> -->
 
     </div>
     <!-- /.row -->

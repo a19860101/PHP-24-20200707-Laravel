@@ -168,6 +168,7 @@ class PostController extends Controller
     }
     public function getAllTrash(){
         $posts = Post::onlyTrashed()->get();
+        // $posts = Post::withTrashed()->get();
         return view('posts.trash',compact('posts'));
         // return $posts;
     }
