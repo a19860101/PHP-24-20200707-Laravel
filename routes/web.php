@@ -34,3 +34,4 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/trash', 'PostController@getAllTrash')->name('trash.index');
+Route::get('/trash/{id}/restore','PostController@restoreTrash')->name('trash.restore');
