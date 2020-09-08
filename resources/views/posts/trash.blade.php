@@ -22,7 +22,7 @@
         <td>{{$post->deleted_at}} <br> {{ Carbon\Carbon::parse($post->deleted_at)->diffForHumans() }}</td>
         <td>
             <a href="{{route('trash.restore',['id'=>$post->id])}}" class="btn btn-success">還原</a>
-            <a href="#" class="btn btn-danger" onclick="return confirm('此動作無法還原，確認永久刪除?')">永久刪除</a>
+            <a href="{{route('trash.delete',['id'=>$post->id])}}" class="btn btn-danger" onclick="return confirm('此動作無法還原，確認永久刪除?')">永久刪除</a>
         </td>
     </tr>
     @endforeach
