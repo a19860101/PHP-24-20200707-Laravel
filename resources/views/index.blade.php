@@ -22,7 +22,7 @@
     <div>
       @foreach($post->tags as $tag)
         <span class="badge badge-info">
-          {{$tag->title}}
+         {{$tag->title}}
         </span>
       @endforeach
     </div>
