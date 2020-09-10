@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Post;
 use App\Category;
+use App\Tag;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Http\Request;
@@ -79,6 +80,12 @@ class PostController extends Controller
         $post->category_id = $request->category_id;
         $post->cover = $cover_name;
         $post->save();
+
+        $tags = explode(',',$request->tag);
+        foreach($tags as $tag){
+            $tagModel = Tag::firstOrCreate(['title' => $tag]);
+            $post->tags()->attach($tagModel -> id);
+        }
 
         // 方法三
         // Post::create($request->all());

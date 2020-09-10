@@ -15,8 +15,8 @@
         <input type="text" name="title" id="title" class="form-control" value="{{old('title')}}">
     </div>
     <div class="form-group">
-        <label for="tag_id">標籤</label>
-        <input type="text" name="tag_id" id="tag_id" class="form-control" value="{{old('tag_id')}}">
+        <label for="tag">標籤</label>
+        <input type="text" name="tag" id="tag" class="form-control" value="{{old('tag')}}">
     </div>
     <div class="form-group">
         <label for="category_id">分類</label>
